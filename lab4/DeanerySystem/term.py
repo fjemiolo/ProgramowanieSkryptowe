@@ -134,3 +134,4 @@ class Term:
         m_dif = self.__minute + add_min - termin.minute
         fin_dur += h_dif * 60 + m_dif
         return Term(termin.hour, termin.minute, fin_dur)
+
