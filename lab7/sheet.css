@@ -45,7 +45,7 @@ h1 {
 main {
     /* Specyfikacja wyglądu */
     float: left;
-    width: 400px;
+    width: 420px;
     clear: left;
     padding: 10px;
     padding-bottom: 20px;
@@ -57,7 +57,7 @@ main h1 {
 
 main pre {
     margin: 5px;
-    margin-left: -55px;
+    margin-left: -50px;
     overflow-x: auto; 
 }
 
