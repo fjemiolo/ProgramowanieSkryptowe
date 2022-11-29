@@ -1,0 +1,103 @@
+aside {
+    /* Specyfikacja wyglądu */
+    float: right;
+    width: 550px;
+    padding: 5px;
+}
+
+aside h1 {
+    margin: 0;
+    font-size: 2em;
+    animation-name: red2blue;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+aside h2 {
+    margin: 0;
+    font-size: 2em;
+}
+
+footer {
+    /* Specyfikacja wyglądu */
+    clear: both;
+    padding: 10px;
+}
+
+@keyframes red2blue {
+    from {
+        color: red;
+    }
+
+    to {
+        color: blue;
+    }
+}
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 3em;
+    margin: 5px;
+}
+
+main {
+    /* Specyfikacja wyglądu */
+    float: left;
+    width: 400px;
+    clear: left;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+main h1 {
+    margin: 0;
+}
+
+main pre {
+    margin: 5px;
+    margin-left: -55px;
+    overflow-x: auto; 
+}
+
+nav {
+    float: left;
+}
+
+nav ul {
+    margin: 25px 0px;
+}
+
+nav li {
+    width: 80px;
+    margin-left: 10px;
+}
+
+
+.azure {
+    background-color: azure;
+}
+
+.glowing-box {
+    border: 2px solid #a8a8a8;
+    box-shadow: 0px 0px 5px black;
+    margin: 10px;
+}
+
+@media screen and (max-aspect-ratio: 5/8) {
+    body {
+        margin: 0px;
+    }
+
+    header, nav, aside, main, footer {
+        width: 100vw;
+        float: none;
+    }
+
+    .glowing-box {
+        border: 2px solid #a8a8a8;
+        box-shadow: 0px 0px 10px black;
+        margin: 10px 0;
+    }
+}
