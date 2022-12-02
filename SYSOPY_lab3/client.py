@@ -42,3 +42,8 @@ while True:
             message = cli_socket.recv(message_length).decode('utf-8')
 
             print(f"{username} > {message}")
+        else:
+            message = sys.stdin.readline().rstrip()
+            message = message.encode('utf-8')
+            message_header = f"{len(message):<{HEADER_LENGTH}}".encode('utf-8')
+            cli_socket.send(message_header + message)
