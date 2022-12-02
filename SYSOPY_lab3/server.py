@@ -53,7 +53,6 @@ while True:
                     clients[notified_socket]['data'].decode('utf-8')))
                 sockets_list.remove(notified_socket)
                 del clients[notified_socket]
-
                 continue
 
             user = clients[notified_socket]
