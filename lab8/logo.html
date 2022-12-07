@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        Logo biblioteki
+    </title>
+</head>
+
+<body>
+    <main>
+        <canvas id="canvas" width="200" height="300" style="border: 1px solid #000000;">
+            Wygląda na to, że twoja przeglądarka nie obsługuje elementu "canvas" / It looks like your browser does not support the "canvas" element
+        </canvas>
+        <script>
+            var canvas = document.getElementById('canvas')
+            var ctx = canvas.getContext('2d')
+
+            ctx.font = '35px Times New Roman';
+            ctx.shadowColor = "#888";
+            ctx.shadowBlur = "15";
+            ctx.fillText("LIBRARY", 23, 268);
+
+            ctx.fillRect(27, 30, 50, 200)
+            ctx.fillRect(87, 70, 40, 160)
+            ctx.fillRect(137, 98, 33, 132)
+
+            ctx.strokeStyle = 'white';
+
+            ctx.lineWidth = 8;
+            ctx.beginPath();
+            ctx.moveTo(27, 50);
+            ctx.lineTo(77, 50);
+            ctx.moveTo(27, 205);
+            ctx.lineTo(77, 205);
+            ctx.stroke();
+
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.moveTo(27, 60);
+            ctx.lineTo(77, 60);
+            ctx.moveTo(27, 215);
+            ctx.lineTo(77, 215);
+            ctx.stroke();
+
+            ctx.lineWidth = 6;
+            ctx.beginPath();
+            ctx.moveTo(87, 85);
+            ctx.lineTo(127, 85);
+            ctx.moveTo(87, 210);
+            ctx.lineTo(127, 210);
+            ctx.stroke();
+
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(87, 93);
+            ctx.lineTo(127, 93);
+            ctx.moveTo(87, 218);
+            ctx.lineTo(127, 218);
+            ctx.stroke();
+
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.moveTo(137, 110);
+            ctx.lineTo(170, 110);
+            ctx.moveTo(137, 215);
+            ctx.lineTo(170, 215);
+            ctx.stroke();
+
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(137, 115);
+            ctx.lineTo(170, 115);
+            ctx.moveTo(137, 220);
+            ctx.lineTo(170, 220);
+            ctx.stroke();
+
+        </script>
+    </main>
+</body>
+
+</html>
+
