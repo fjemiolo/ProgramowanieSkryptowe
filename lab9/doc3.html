@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    
+    <input id="counter" type="number" value="10"><br><br>
+    <div id="mydiv"></div>
+    <script type="text/babel">
+
+        let input = document.getElementById("counter");
+        input.value = 10;
+        
+        class Span extends React.Component{
+            constructor() {
+                super();
+                this.val = 10;
+            }
+            render() {
+                return <span>{this.props.val}<br/></span>;
+            }
+        }
+
+        class Spans extends React.Component {
+            render() {
+                return (
+                    [<Span val={this.props.number}/>,
+                    <Span val={this.props.number}/>,
+                    <Span val={this.props.number}/>,
+                    <Span val={this.props.number}/>,
+                    <Span val={this.props.number}/>,
+                    <Span val={this.props.number}/>,
+                    <Span val={this.props.number}/>]
+                );
+            }
+        }
+
+
+        ReactDOM.render(<Spans />, document.getElementById('mydiv'))
+
+        function decrement_counter()
+        {
+            let iteration = parseInt(input.value);
+            if (iteration <= 0)
+                return;
+            input.value = --iteration;
+        }
+
+        function decrement_spans()
+        {
+            let iteration = parseInt(input.value);
+            if (iteration <= 0)
+                return;
+            ReactDOM.render(<Spans number={--iteration}/>, document.getElementById('mydiv'))
+        }
+
+        setInterval(decrement_spans, 1000);
+        setInterval(decrement_counter, 1000);
+
+    </script>
+
+  </body>
+</html>
