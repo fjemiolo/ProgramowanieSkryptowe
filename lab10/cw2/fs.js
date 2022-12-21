@@ -7,9 +7,8 @@ if (process.argv[2] != null) {
         if (isDirectory(path)) {
             console.log(path, 'jest katalogiem')
         } else if (isFile(path)) {
-            fs.readFile(path, 'utf8', (err, data) => {
-                console.log(path, 'jest plikiem, a jego zawartością jest:\n     ', data)
-            });
+            const data = fs.readFileSync(path, {encoding:'utf8', flag:'r'});
+            console.log(path, 'jest plikiem, a jego zawartością jest:\n     ', data)
         }
     } else {
         console.log('To coś nie istnieje!')
@@ -18,12 +17,7 @@ if (process.argv[2] != null) {
 }
 
 function exists(path) {
-    try {
-        return fs.existsSync(path);
-    }
-    catch (err) {
-        return false
-    }
+    return fs.existsSync(path);
 }
 
 function isDirectory(path) {
